@@ -3,15 +3,12 @@ install_banner "Amass using go"
 #extractZip $TMP_DIST/amass.zip
 #For now it is work witout compy the amass binary to osmedeus-base folder
 #go install -v github.com/owasp-amass/amass/v4/...@master &> /dev/null
-curl https://raw.githubusercontent.com/moaad-studies/recon-tools/main/amass -o amass
-cp ./amass "$HOME/osmedeus-base/binaries/amass"
-cp ./amass "$GOPATH/bin/amass"
+curl https://raw.githubusercontent.com/moaad-studies/recon-tools/main/amass -o amass && cp ./amass "$HOME/osmedeus-base/binaries/amass" && cp ./amass "$GOPATH/bin/amass"
 
 #Same thing,but i see the code for command "osmedeus health" , it is check if there is httprobe in ~/osmedeus-base/binaries
 install_banner "httprobe using go" 
 #go install github.com/tomnomnom/httprobe@latest &> /dev/null 
-curl https://raw.githubusercontent.com/moaad-studies/recon-tools/main/httprobe -o httprob
-cp ./httprobe "$HOME/osmedeus-base/binaries/httprobe" 
+curl https://raw.githubusercontent.com/moaad-studies/recon-tools/main/httprobe -o httprob && cp ./httprobe "$HOME/osmedeus-base/binaries/httprobe" 
 
 
 install_banner "subfinder"
