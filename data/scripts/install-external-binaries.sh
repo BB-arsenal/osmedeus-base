@@ -1,4 +1,4 @@
-install_banner "Amass" using go (it support Alpine)
+install_banner "Amass using go (it support Alpine)" 
 #download $TMP_DIST/amass.zip https://github.com/OWASP/Amass/releases/download/v4.2.0/amass_linux_amd64.zip
 #extractZip $TMP_DIST/amass.zip
 #For now it is work witout compy the amass binary to osmedeus-base folder
