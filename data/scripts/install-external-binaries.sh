@@ -2,12 +2,12 @@ install_banner "Amass using go"
 #download $TMP_DIST/amass.zip https://github.com/OWASP/Amass/releases/download/v4.2.0/amass_linux_amd64.zip
 #extractZip $TMP_DIST/amass.zip
 #For now it is work witout compy the amass binary to osmedeus-base folder
-go install -v github.com/owasp-amass/amass/v4/...@master
+go install -v github.com/owasp-amass/amass/v4/...@master &> /dev/null
 
 #Same thing,but i see the code for command "osmedeus health" , it is check if there is httprobe in ~/osmedeus-base/binaries
 install_banner "httprobe using go" 
-go install github.com/tomnomnom/httprobe@latest
-cp /root/go/bin/httprobe "$HOME/osmedeus-base/binaries"
+go install github.com/tomnomnom/httprobe@latest &> /dev/null
+cp /root/go/bin/httprobe "$HOME/osmedeus-base/binaries" 
 
 
 install_banner "subfinder"
