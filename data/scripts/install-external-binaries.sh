@@ -7,7 +7,7 @@ go install -v github.com/owasp-amass/amass/v4/...@master &> /dev/null
 #Same thing,but i see the code for command "osmedeus health" , it is check if there is httprobe in ~/osmedeus-base/binaries
 install_banner "httprobe using go" 
 go install github.com/tomnomnom/httprobe@latest &> /dev/null
-cp /root/go/bin/httprobe "$HOME/osmedeus-base/binaries" 
+cp "$GOPATH/bin/httprobe" "$HOME/osmedeus-base/binaries/httprobe" 
 
 
 install_banner "subfinder"
